@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.guflimc.brick.placeholders.minestom.api","l":"MinestomPlaceholderAPI"},{"p":"com.guflimc.brick.placeholders.minestom.api","l":"MinestomPlaceholderManager"}];updateSearchResults();

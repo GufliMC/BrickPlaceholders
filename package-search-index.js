@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.guflimc.brick.placeholders.api"},{"l":"com.guflimc.brick.placeholders.minestom.api"},{"l":"com.guflimc.brick.placeholders.spigot.api"}];updateSearchResults();
