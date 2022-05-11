@@ -15,11 +15,7 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var evenRowColor = "even-row-color";
-var oddRowColor = "odd-row-color";
-var tableTab = "table-tab";
-var activeTableTab = "active-table-tab";
-var pathtoroot = "../../../../../../";
+<script type="text/javascript">var pathtoroot = "../../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -52,7 +48,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method-detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search-input">SEARCH:</label>
@@ -85,171 +81,9 @@ extends <a href="../../api/PlaceholderManager.html" title="interface in com.gufl
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
-<div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#placeholders()" class="member-name-link">placeholders</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Get a list of registered placeholders.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#registerReplacer(java.lang.String,java.util.function.BiFunction)" class="member-name-link">registerReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;net.minestom.server.entity.Player,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Register a replacer function for a placeholder.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#registerReplacer(java.lang.String,java.util.function.Function)" class="member-name-link">registerReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;net.minestom.server.entity.Player,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Register a replacer function for a placeholder.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(net.minestom.server.entity.Player,java.lang.String)" class="member-name-link">replace</a><wbr>(@NotNull net.minestom.server.entity.Player&nbsp;entity,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Replace placeholders in a component for the given player.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(net.minestom.server.entity.Player,net.kyori.adventure.text.Component)" class="member-name-link">replace</a><wbr>(@NotNull net.minestom.server.entity.Player&nbsp;entity,
- @NotNull net.kyori.adventure.text.Component&nbsp;component)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Replace placeholders in a component for the given entity.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unregisterReplacer(java.lang.String)" class="member-name-link">unregisterReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Unregister a placeholder.</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</li>
-</ul>
-</section>
-<section class="details">
-<ul class="details-list">
-<!-- ============ METHOD DETAIL ========== -->
-<li>
-<section class="method-details" id="method-detail">
-<h2>Method Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="replace(net.minestom.server.entity.Player,net.kyori.adventure.text.Component)">
-<h3>replace</h3>
-<div class="member-signature"><span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replace</span><wbr><span class="parameters">(@NotNull
- @NotNull net.minestom.server.entity.Player&nbsp;entity,
- @NotNull
- @NotNull net.kyori.adventure.text.Component&nbsp;component)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/PlaceholderManager.html#replace(T,net.kyori.adventure.text.Component)">PlaceholderManager</a></code></span></div>
-<div class="block">Replace placeholders in a component for the given entity.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../api/PlaceholderManager.html#replace(T,net.kyori.adventure.text.Component)">replace</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;net.minestom.server.entity.Player&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>entity</code> - for whom to replace placeholders</dd>
-<dd><code>component</code> - to replace placeholders in</dd>
-<dt>Returns:</dt>
-<dd>the component with placeholders replaced</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="replace(net.minestom.server.entity.Player,java.lang.String)">
-<h3>replace</h3>
-<div class="member-signature"><span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replace</span><wbr><span class="parameters">(@NotNull
- @NotNull net.minestom.server.entity.Player&nbsp;entity,
- @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/PlaceholderManager.html#replace(T,java.lang.String)">PlaceholderManager</a></code></span></div>
-<div class="block">Replace placeholders in a component for the given player.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../api/PlaceholderManager.html#replace(T,java.lang.String)">replace</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;net.minestom.server.entity.Player&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>entity</code> - for whom to replace placeholders</dd>
-<dd><code>text</code> - to replace placeholders in</dd>
-<dt>Returns:</dt>
-<dd>the component with placeholders replaced</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="placeholders()">
-<h3>placeholders</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">placeholders</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/PlaceholderManager.html#placeholders()">PlaceholderManager</a></code></span></div>
-<div class="block">Get a list of registered placeholders.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../api/PlaceholderManager.html#placeholders()">placeholders</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;net.minestom.server.entity.Player&gt;</code></dd>
-<dt>Returns:</dt>
-<dd>a list of registered placeholders</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="registerReplacer(java.lang.String,java.util.function.BiFunction)">
-<h3>registerReplacer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">registerReplacer</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;net.minestom.server.entity.Player,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.BiFunction)">PlaceholderManager</a></code></span></div>
-<div class="block">Register a replacer function for a placeholder.
-
- The function is in the following format: (entity, placeholder) -> component.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.BiFunction)">registerReplacer</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;net.minestom.server.entity.Player&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>key</code> - the placeholder for the replacer function</dd>
-<dd><code>replacer</code> - the replacer function</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="registerReplacer(java.lang.String,java.util.function.Function)">
-<h3>registerReplacer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">registerReplacer</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;net.minestom.server.entity.Player,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.Function)">PlaceholderManager</a></code></span></div>
-<div class="block">Register a replacer function for a placeholder.
-
- The function is in the following format: (entity) -> component.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.Function)">registerReplacer</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;net.minestom.server.entity.Player&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>key</code> - the placeholder for the replacer function</dd>
-<dd><code>replacer</code> - the replacer function</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="unregisterReplacer(java.lang.String)">
-<h3>unregisterReplacer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">unregisterReplacer</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../api/PlaceholderManager.html#unregisterReplacer(java.lang.String)">PlaceholderManager</a></code></span></div>
-<div class="block">Unregister a placeholder.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../api/PlaceholderManager.html#unregisterReplacer(java.lang.String)">unregisterReplacer</a></code>&nbsp;in interface&nbsp;<code><a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;net.minestom.server.entity.Player&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>key</code> - the placeholder to unregister</dd>
-</dl>
-</section>
-</li>
-</ul>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.guflimc.brick.placeholders.api.PlaceholderManager">Methods inherited from interface&nbsp;com.guflimc.brick.placeholders.api.<a href="../../api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></h3>
+<code><a href="../../api/PlaceholderManager.html#placeholders()">placeholders</a>, <a href="../../api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.BiFunction)">registerReplacer</a>, <a href="../../api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.Function)">registerReplacer</a>, <a href="../../api/PlaceholderManager.html#replace(T,java.lang.String)">replace</a>, <a href="../../api/PlaceholderManager.html#replace(T,net.kyori.adventure.text.Component)">replace</a>, <a href="../../api/PlaceholderManager.html#unregisterReplacer(java.lang.String)">unregisterReplacer</a></code></div>
 </section>
 </li>
 </ul>
