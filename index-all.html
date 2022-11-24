@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="index-page">
@@ -83,6 +83,8 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&gt; - Interface in <a href="com/guflimc/brick/placeholders/api/package-summary.html">com.guflimc.brick.placeholders.api</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/guflimc/brick/placeholders/api/PlaceholderReplacer.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a>&lt;<a href="com/guflimc/brick/placeholders/api/PlaceholderReplacer.html" title="type parameter in PlaceholderReplacer">T</a>&gt; - Interface in <a href="com/guflimc/brick/placeholders/api/package-summary.html">com.guflimc.brick.placeholders.api</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html#placeholders()" class="member-name-link">placeholders()</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></dt>
 <dd>
 <div class="block">Get a list of registered placeholders.</div>
@@ -94,7 +96,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/guflimc/brick/placeholders/spigot/api/SpigotPlaceholderAPI.html#registerManager(com.guflimc.brick.placeholders.spigot.api.SpigotPlaceholderManager)" class="member-name-link">registerManager(SpigotPlaceholderManager)</a> - Static method in class com.guflimc.brick.placeholders.spigot.api.<a href="com/guflimc/brick/placeholders/spigot/api/SpigotPlaceholderAPI.html" title="class in com.guflimc.brick.placeholders.spigot.api">SpigotPlaceholderAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html#registerReplacer(java.lang.String,java.util.function.BiFunction)" class="member-name-link">registerReplacer(String, BiFunction&lt;T, String, Component&gt;)</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></dt>
+<dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html#registerReplacer(java.lang.String,com.guflimc.brick.placeholders.api.PlaceholderReplacer)" class="member-name-link">registerReplacer(String, PlaceholderReplacer&lt;T&gt;)</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></dt>
 <dd>
 <div class="block">Register a replacer function for a placeholder.</div>
 </dd>
@@ -104,11 +106,17 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html#replace(T,java.lang.String)" class="member-name-link">replace(T, String)</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></dt>
 <dd>
-<div class="block">Replace placeholders in a component for the given player.</div>
+<div class="block">Replace placeholders in a string for the given player.</div>
 </dd>
+<dt><a href="com/guflimc/brick/placeholders/api/PlaceholderReplacer.html#replace(T,java.lang.String)" class="member-name-link">replace(T, String)</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderReplacer.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html#replace(T,net.kyori.adventure.text.Component)" class="member-name-link">replace(T, Component)</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></dt>
 <dd>
 <div class="block">Replace placeholders in a component for the given entity.</div>
+</dd>
+<dt><a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html#replacement(T,java.lang.String)" class="member-name-link">replacement(T, String)</a> - Method in interface com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a></dt>
+<dd>
+<div class="block">Return the replaced component for the given placeholder.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>

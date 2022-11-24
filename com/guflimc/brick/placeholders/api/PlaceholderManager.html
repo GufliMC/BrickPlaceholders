@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -97,8 +97,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Get a list of registered placeholders.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#registerReplacer(java.lang.String,java.util.function.BiFunction)" class="member-name-link">registerReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#registerReplacer(java.lang.String,com.guflimc.brick.placeholders.api.PlaceholderReplacer)" class="member-name-link">registerReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ @NotNull <a href="PlaceholderReplacer.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&gt;&nbsp;replacer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Register a replacer function for a placeholder.</div>
 </div>
@@ -112,7 +112,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(T,java.lang.String)" class="member-name-link">replace</a><wbr>(<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
  @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Replace placeholders in a component for the given player.</div>
+<div class="block">Replace placeholders in a string for the given player.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(T,net.kyori.adventure.text.Component)" class="member-name-link">replace</a><wbr>(<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
@@ -120,9 +120,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Replace placeholders in a component for the given entity.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unregisterReplacer(java.lang.String)" class="member-name-link">unregisterReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replacement(T,java.lang.String)" class="member-name-link">replacement</a><wbr>(<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Return the replaced component for the given placeholder.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unregisterReplacer(java.lang.String)" class="member-name-link">unregisterReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unregister a placeholder.</div>
 </div>
 </div>
@@ -163,13 +169,30 @@ loadScripts(document, 'script');</script>
  <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
  @NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
-<div class="block">Replace placeholders in a component for the given player.</div>
+<div class="block">Replace placeholders in a string for the given player.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>entity</code> - for whom to replace placeholders</dd>
 <dd><code>text</code> - to replace placeholders in</dd>
 <dt>Returns:</dt>
 <dd>the component with placeholders replaced</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replacement(T,java.lang.String)">
+<h3 id="replacement(java.lang.Object,java.lang.String)">replacement</h3>
+<div class="member-signature"><span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replacement</span><wbr><span class="parameters">(@NotNull
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
+ @NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block">Return the replaced component for the given placeholder.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>entity</code> - for whom to replace placeholders.</dd>
+<dd><code>key</code> - the name of the placeholder to replace.</dd>
+<dt>Returns:</dt>
+<dd>the component that matches the given placeholder.</dd>
 </dl>
 </section>
 </li>
@@ -185,14 +208,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="registerReplacer(java.lang.String,java.util.function.BiFunction)">
+<section class="detail" id="registerReplacer(java.lang.String,com.guflimc.brick.placeholders.api.PlaceholderReplacer)">
 <h3>registerReplacer</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">registerReplacer</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</span></div>
+ @NotNull <a href="PlaceholderReplacer.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&gt;&nbsp;replacer)</span></div>
 <div class="block">Register a replacer function for a placeholder.
-
  The function is in the following format: (entity, placeholder) -> component.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -209,7 +231,6 @@ loadScripts(document, 'script');</script>
  @NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</span></div>
 <div class="block">Register a replacer function for a placeholder.
-
  The function is in the following format: (entity) -> component.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
