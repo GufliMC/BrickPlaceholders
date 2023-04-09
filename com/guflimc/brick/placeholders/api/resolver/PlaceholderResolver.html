@@ -100,6 +100,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static &lt;E,<wbr>
+R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#requireEntity(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)" class="member-name-link">requireEntity</a><wbr>(@NotNull <a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;&nbsp;resolver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static &lt;E,<wbr>
+R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#requireViewer(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)" class="member-name-link">requireViewer</a><wbr>(@NotNull <a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;&nbsp;resolver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="PlaceholderResolver.html" title="type parameter in PlaceholderResolver">R</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resolve(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)" class="member-name-link">resolve</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
  @NotNull <a href="PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderResolver.html" title="type parameter in PlaceholderResolver">E</a>&gt;&nbsp;context)</code></div>
@@ -145,14 +153,6 @@ R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.br
 R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typedLong(java.util.function.BiFunction)" class="member-name-link">typedLong</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html" title="class or interface in java.util.function" class="external-link">BiFunction</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>,<wbr><a href="PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;E&gt;,<wbr>R&gt;&nbsp;resolver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static &lt;E,<wbr>
-R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#withEntity(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)" class="member-name-link">withEntity</a><wbr>(@NotNull <a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;&nbsp;resolver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static &lt;E,<wbr>
-R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#withEntityViewer(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)" class="member-name-link">withEntityViewer</a><wbr>(@NotNull <a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;&nbsp;resolver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -177,18 +177,18 @@ R&gt;&nbsp;<a href="PlaceholderResolver.html" title="interface in com.guflimc.br
 </section>
 </li>
 <li>
-<section class="detail" id="withEntity(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)">
-<h3>withEntity</h3>
+<section class="detail" id="requireEntity(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)">
+<h3>requireEntity</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;E,<wbr>
-R&gt;</span>&nbsp;<span class="return-type"><a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</span>&nbsp;<span class="element-name">withEntity</span><wbr><span class="parameters">(@NotNull
+R&gt;</span>&nbsp;<span class="return-type"><a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</span>&nbsp;<span class="element-name">requireEntity</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;&nbsp;resolver)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="withEntityViewer(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)">
-<h3>withEntityViewer</h3>
+<section class="detail" id="requireViewer(com.guflimc.brick.placeholders.api.resolver.PlaceholderResolver)">
+<h3>requireViewer</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;E,<wbr>
-R&gt;</span>&nbsp;<span class="return-type"><a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</span>&nbsp;<span class="element-name">withEntityViewer</span><wbr><span class="parameters">(@NotNull
+R&gt;</span>&nbsp;<span class="return-type"><a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;</span>&nbsp;<span class="element-name">requireViewer</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="PlaceholderResolver.html" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;&nbsp;resolver)</span></div>
 </section>
 </li>
