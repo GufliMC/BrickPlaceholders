@@ -51,6 +51,9 @@ loadScripts(document, 'script');</script>
 <span class="package-hierarchy-label">Package Hierarchies:</span>
 <ul class="horizontal">
 <li><a href="com/guflimc/brick/placeholders/api/package-tree.html">com.guflimc.brick.placeholders.api</a>, </li>
+<li><a href="com/guflimc/brick/placeholders/api/exception/package-tree.html">com.guflimc.brick.placeholders.api.exception</a>, </li>
+<li><a href="com/guflimc/brick/placeholders/api/module/package-tree.html">com.guflimc.brick.placeholders.api.module</a>, </li>
+<li><a href="com/guflimc/brick/placeholders/api/resolver/package-tree.html">com.guflimc.brick.placeholders.api.resolver</a>, </li>
 <li><a href="com/guflimc/brick/placeholders/minestom/api/package-tree.html">com.guflimc.brick.placeholders.minestom.api</a>, </li>
 <li><a href="com/guflimc/brick/placeholders/spigot/api/package-tree.html">com.guflimc.brick.placeholders.spigot.api</a></li>
 </ul>
@@ -60,8 +63,24 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" class="type-name-link external-link" title="class or interface in java.lang">Object</a>
 <ul>
+<li class="circle">com.guflimc.brick.placeholders.api.module.<a href="com/guflimc/brick/placeholders/api/module/BasePlaceholderModule.html" class="type-name-link" title="class in com.guflimc.brick.placeholders.api.module">BasePlaceholderModule</a>&lt;E&gt; (implements com.guflimc.brick.placeholders.api.module.<a href="com/guflimc/brick/placeholders/api/module/PlaceholderModule.html" title="interface in com.guflimc.brick.placeholders.api.module">PlaceholderModule</a>&lt;E&gt;)</li>
 <li class="circle">com.guflimc.brick.placeholders.minestom.api.<a href="com/guflimc/brick/placeholders/minestom/api/MinestomPlaceholderAPI.html" class="type-name-link" title="class in com.guflimc.brick.placeholders.minestom.api">MinestomPlaceholderAPI</a></li>
+<li class="circle">com.guflimc.brick.placeholders.api.resolver.<a href="com/guflimc/brick/placeholders/api/resolver/PlaceholderResolveContext.html" class="type-name-link" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;E&gt;</li>
 <li class="circle">com.guflimc.brick.placeholders.spigot.api.<a href="com/guflimc/brick/placeholders/spigot/api/SpigotPlaceholderAPI.html" class="type-name-link" title="class in com.guflimc.brick.placeholders.spigot.api">SpigotPlaceholderAPI</a></li>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" class="type-name-link external-link" title="class or interface in java.lang">Throwable</a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
+<ul>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" class="type-name-link external-link" title="class or interface in java.lang">Exception</a>
+<ul>
+<li class="circle">com.guflimc.brick.placeholders.api.exception.<a href="com/guflimc/brick/placeholders/api/exception/ReplacementConversionException.html" class="type-name-link" title="class in com.guflimc.brick.placeholders.api.exception">ReplacementConversionException</a></li>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html" class="type-name-link external-link" title="class or interface in java.lang">RuntimeException</a>
+<ul>
+<li class="circle">com.guflimc.brick.placeholders.api.exception.<a href="com/guflimc/brick/placeholders/api/exception/TypedResolverConversionException.html" class="type-name-link" title="class in com.guflimc.brick.placeholders.api.exception">TypedResolverConversionException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -69,13 +88,17 @@ loadScripts(document, 'script');</script>
 <section class="hierarchy">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
-<li class="circle">com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;T&gt;
+<li class="circle">com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderManager.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api">PlaceholderManager</a>&lt;E&gt;
 <ul>
 <li class="circle">com.guflimc.brick.placeholders.minestom.api.<a href="com/guflimc/brick/placeholders/minestom/api/MinestomPlaceholderManager.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.minestom.api">MinestomPlaceholderManager</a></li>
 <li class="circle">com.guflimc.brick.placeholders.spigot.api.<a href="com/guflimc/brick/placeholders/spigot/api/SpigotPlaceholderManager.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.spigot.api">SpigotPlaceholderManager</a></li>
 </ul>
 </li>
-<li class="circle">com.guflimc.brick.placeholders.api.<a href="com/guflimc/brick/placeholders/api/PlaceholderReplacer.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a>&lt;T&gt;</li>
+<li class="circle">com.guflimc.brick.placeholders.api.resolver.<a href="com/guflimc/brick/placeholders/api/resolver/PlaceholderResolver.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolver</a>&lt;E,<wbr>R&gt;
+<ul>
+<li class="circle">com.guflimc.brick.placeholders.api.module.<a href="com/guflimc/brick/placeholders/api/module/PlaceholderModule.html" class="type-name-link" title="interface in com.guflimc.brick.placeholders.api.module">PlaceholderModule</a>&lt;E&gt;</li>
+</ul>
+</li>
 </ul>
 </section>
 </main>

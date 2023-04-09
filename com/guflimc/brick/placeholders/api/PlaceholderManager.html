@@ -68,7 +68,7 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.guflimc.brick.placeholders.api</a></div>
-<h1 title="Interface PlaceholderManager" class="title">Interface PlaceholderManager&lt;T&gt;</h1>
+<h1 title="Interface PlaceholderManager" class="title">Interface PlaceholderManager&lt;E&gt;</h1>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../minestom/api/MinestomPlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.minestom.api">MinestomPlaceholderManager</a></code>, <code><a href="../spigot/api/SpigotPlaceholderManager.html" title="interface in com.guflimc.brick.placeholders.spigot.api">SpigotPlaceholderManager</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PlaceholderManager&lt;T&gt;</span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PlaceholderManager&lt;E&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -85,51 +85,71 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#placeholders()" class="member-name-link">placeholders</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#register(com.guflimc.brick.placeholders.api.module.PlaceholderModule)" class="member-name-link">register</a><wbr>(@NotNull <a href="module/PlaceholderModule.html" title="interface in com.guflimc.brick.placeholders.api.module">PlaceholderModule</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;module)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Get a list of registered placeholders.</div>
+<div class="block">Register a module that provides placeholders.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)" class="member-name-link">replace</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Replace placeholders.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default net.kyori.adventure.text.Component</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#replace(java.lang.String,E)" class="member-name-link">replace</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Replace placeholders with the given entity as context.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(net.kyori.adventure.text.Component,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)" class="member-name-link">replace</a><wbr>(@NotNull net.kyori.adventure.text.Component&nbsp;component,
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Replace placeholders.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default net.kyori.adventure.text.Component</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#replace(net.kyori.adventure.text.Component,E)" class="member-name-link">replace</a><wbr>(@NotNull net.kyori.adventure.text.Component&nbsp;component,
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Replace placeholders with the given entity as context.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resolve(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)" class="member-name-link">resolve</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Resolve the placeholder replacement for the given context.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;R&gt;&nbsp;R</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resolve(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext,java.lang.Class)" class="member-name-link">resolve</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context,
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Resolve the placeholder replacement for the given context.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#resolve(java.lang.String,E)" class="member-name-link">resolve</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Resolve the placeholder replacement for the given entity as context.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;R&gt;&nbsp;R</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#resolve(java.lang.String,E,java.lang.Class)" class="member-name-link">resolve</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity,
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Resolve the placeholder replacement for the given entity as context.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#registerReplacer(java.lang.String,com.guflimc.brick.placeholders.api.PlaceholderReplacer)" class="member-name-link">registerReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull <a href="PlaceholderReplacer.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&gt;&nbsp;replacer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unregister(com.guflimc.brick.placeholders.api.module.PlaceholderModule)" class="member-name-link">unregister</a><wbr>(@NotNull <a href="module/PlaceholderModule.html" title="interface in com.guflimc.brick.placeholders.api.module">PlaceholderModule</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;module)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Register a replacer function for a placeholder.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#registerReplacer(java.lang.String,java.util.function.Function)" class="member-name-link">registerReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Register a replacer function for a placeholder.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(T,java.lang.String)" class="member-name-link">replace</a><wbr>(<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Replace placeholders in a string for the given player.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replace(T,net.kyori.adventure.text.Component)" class="member-name-link">replace</a><wbr>(<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
- @NotNull net.kyori.adventure.text.Component&nbsp;component)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Replace placeholders in a component for the given entity.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.kyori.adventure.text.Component</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replacement(T,java.lang.String)" class="member-name-link">replacement</a><wbr>(<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Return the replaced component for the given placeholder.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unregisterReplacer(java.lang.String)" class="member-name-link">unregisterReplacer</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Unregister a placeholder.</div>
+<div class="block">Unregister a placeholder module</div>
 </div>
 </div>
 </div>
@@ -146,13 +166,29 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="replace(T,net.kyori.adventure.text.Component)">
-<h3 id="replace(java.lang.Object,net.kyori.adventure.text.Component)">replace</h3>
+<section class="detail" id="replace(net.kyori.adventure.text.Component,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)">
+<h3>replace</h3>
 <div class="member-signature"><span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replace</span><wbr><span class="parameters">(@NotNull
- <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
+ @NotNull net.kyori.adventure.text.Component&nbsp;component,
  @NotNull
- @NotNull net.kyori.adventure.text.Component&nbsp;component)</span></div>
-<div class="block">Replace placeholders in a component for the given entity.</div>
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context)</span></div>
+<div class="block">Replace placeholders.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>component</code> - to replace placeholders in</dd>
+<dt>Returns:</dt>
+<dd>the component with placeholders replaced</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replace(net.kyori.adventure.text.Component,E)">
+<h3 id="replace(net.kyori.adventure.text.Component,java.lang.Object)">replace</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replace</span><wbr><span class="parameters">(@NotNull
+ @NotNull net.kyori.adventure.text.Component&nbsp;component,
+ @NotNull
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity)</span></div>
+<div class="block">Replace placeholders with the given entity as context.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>entity</code> - for whom to replace placeholders</dd>
@@ -163,13 +199,29 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="replace(T,java.lang.String)">
-<h3 id="replace(java.lang.Object,java.lang.String)">replace</h3>
+<section class="detail" id="replace(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)">
+<h3>replace</h3>
 <div class="member-signature"><span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replace</span><wbr><span class="parameters">(@NotNull
- <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
  @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
-<div class="block">Replace placeholders in a string for the given player.</div>
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context)</span></div>
+<div class="block">Replace placeholders.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>text</code> - to replace placeholders in</dd>
+<dt>Returns:</dt>
+<dd>the component with placeholders replaced</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replace(java.lang.String,E)">
+<h3 id="replace(java.lang.String,java.lang.Object)">replace</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replace</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text,
+ @NotNull
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity)</span></div>
+<div class="block">Replace placeholders with the given entity as context.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>entity</code> - for whom to replace placeholders</dd>
@@ -180,74 +232,98 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="replacement(T,java.lang.String)">
-<h3 id="replacement(java.lang.Object,java.lang.String)">replacement</h3>
-<div class="member-signature"><span class="return-type">net.kyori.adventure.text.Component</span>&nbsp;<span class="element-name">replacement</span><wbr><span class="parameters">(@NotNull
- <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&nbsp;entity,
+<section class="detail" id="resolve(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext)">
+<h3>resolve</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
  @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">Return the replaced component for the given placeholder.</div>
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context)</span></div>
+<div class="block">Resolve the placeholder replacement for the given context.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the replacement.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="resolve(java.lang.String,com.guflimc.brick.placeholders.api.resolver.PlaceholderResolveContext,java.lang.Class)">
+<h3>resolve</h3>
+<div class="member-signature"><span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ @NotNull
+ @NotNull <a href="resolver/PlaceholderResolveContext.html" title="class in com.guflimc.brick.placeholders.api.resolver">PlaceholderResolveContext</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;context,
+ @NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</span>
+       throws <span class="exceptions"><a href="exception/ReplacementConversionException.html" title="class in com.guflimc.brick.placeholders.api.exception">ReplacementConversionException</a></span></div>
+<div class="block">Resolve the placeholder replacement for the given context. This will try to convert the replacement to the given type.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the replacement.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="exception/ReplacementConversionException.html" title="class in com.guflimc.brick.placeholders.api.exception">ReplacementConversionException</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="resolve(java.lang.String,E)">
+<h3 id="resolve(java.lang.String,java.lang.Object)">resolve</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ @NotNull
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity)</span></div>
+<div class="block">Resolve the placeholder replacement for the given entity as context.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>entity</code> - for whom to replace placeholders.</dd>
-<dd><code>key</code> - the name of the placeholder to replace.</dd>
+<dd><code>placeholder</code> - the placeholder to replace</dd>
 <dt>Returns:</dt>
-<dd>the component that matches the given placeholder.</dd>
+<dd>the replacement.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="placeholders()">
-<h3>placeholders</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">placeholders</span>()</div>
-<div class="block">Get a list of registered placeholders.</div>
+<section class="detail" id="resolve(java.lang.String,E,java.lang.Class)">
+<h3 id="resolve(java.lang.String,java.lang.Object,java.lang.Class)">resolve</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name">resolve</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;placeholder,
+ @NotNull
+ <a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&nbsp;entity,
+ @NotNull
+ @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;R&gt;&nbsp;type)</span>
+               throws <span class="exceptions"><a href="exception/ReplacementConversionException.html" title="class in com.guflimc.brick.placeholders.api.exception">ReplacementConversionException</a></span></div>
+<div class="block">Resolve the placeholder replacement for the given entity as context. This will try to convert the replacement to the given type.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>entity</code> - for whom to replace placeholders.</dd>
+<dd><code>placeholder</code> - the placeholder to replace</dd>
 <dt>Returns:</dt>
-<dd>a list of registered placeholders</dd>
+<dd>the replacement.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="exception/ReplacementConversionException.html" title="class in com.guflimc.brick.placeholders.api.exception">ReplacementConversionException</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="registerReplacer(java.lang.String,com.guflimc.brick.placeholders.api.PlaceholderReplacer)">
-<h3>registerReplacer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">registerReplacer</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull
- @NotNull <a href="PlaceholderReplacer.html" title="interface in com.guflimc.brick.placeholders.api">PlaceholderReplacer</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>&gt;&nbsp;replacer)</span></div>
-<div class="block">Register a replacer function for a placeholder.
- The function is in the following format: (entity, placeholder) -> component.</div>
+<section class="detail" id="register(com.guflimc.brick.placeholders.api.module.PlaceholderModule)">
+<h3>register</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">register</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="module/PlaceholderModule.html" title="interface in com.guflimc.brick.placeholders.api.module">PlaceholderModule</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;module)</span></div>
+<div class="block">Register a module that provides placeholders.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>key</code> - the placeholder for the replacer function</dd>
-<dd><code>replacer</code> - the replacer function</dd>
+<dd><code>module</code> - the module to register</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="registerReplacer(java.lang.String,java.util.function.Function)">
-<h3>registerReplacer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">registerReplacer</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- @NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">T</a>,<wbr>net.kyori.adventure.text.Component&gt;&nbsp;replacer)</span></div>
-<div class="block">Register a replacer function for a placeholder.
- The function is in the following format: (entity) -> component.</div>
+<section class="detail" id="unregister(com.guflimc.brick.placeholders.api.module.PlaceholderModule)">
+<h3>unregister</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">unregister</span><wbr><span class="parameters">(@NotNull
+ @NotNull <a href="module/PlaceholderModule.html" title="interface in com.guflimc.brick.placeholders.api.module">PlaceholderModule</a>&lt;<a href="PlaceholderManager.html" title="type parameter in PlaceholderManager">E</a>&gt;&nbsp;module)</span></div>
+<div class="block">Unregister a placeholder module</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>key</code> - the placeholder for the replacer function</dd>
-<dd><code>replacer</code> - the replacer function</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="unregisterReplacer(java.lang.String)">
-<h3>unregisterReplacer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">unregisterReplacer</span><wbr><span class="parameters">(@NotNull
- @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">Unregister a placeholder.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>key</code> - the placeholder to unregister</dd>
+<dd><code>module</code> - the module to unregister.</dd>
 </dl>
 </section>
 </li>
