@@ -1,6 +1,7 @@
 com.guflimc.brick.placeholders.api
 com.guflimc.brick.placeholders.api.exception
 com.guflimc.brick.placeholders.api.module
+com.guflimc.brick.placeholders.api.parser
 com.guflimc.brick.placeholders.api.resolver
 com.guflimc.brick.placeholders.minestom.api
 com.guflimc.brick.placeholders.spigot.api
